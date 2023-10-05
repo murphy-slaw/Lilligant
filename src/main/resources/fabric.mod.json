@@ -1,0 +1,27 @@
+{
+    "schemaVersion": 1,
+    "id": "lilligant",
+    "name": "Lilligant",
+    "description": "helper library",
+    "version": "0.7.0",
+    "authors": [{"name": "Lura Skye", "contact": {"sources": "https://github.com/Fuyukai"}}],
+    "license": ["MPL-2.0"],
+    "icon": "assets/lilligant/icon.png",
+
+    "mixins": ["lilligant.mixins.json"],
+
+    "entrypoints": {
+        "main": [{"adapter": "kotlin", "value": "tf.veriny.lilligant.MakeUp"}]
+    },
+
+    "depends": {
+        "fabricloader": "*",
+        "minecraft": "=1.20.1"
+    },
+
+    "custom": {
+        "modmenu": {
+
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "package": "tf.veriny.lilligant.mixin",
+    "minVersion": "0.8.5",
+    "required": true,
+    "mixins": [
+        "enchant.AddEnchantmentInterceptorsToHelper",
+        "enchant.ImplAerialAffinity",
+        "peai.ImplPEAIMiningSpeed",
+        "peai.ImplPEAISuitableFor"
+    ]
+}
