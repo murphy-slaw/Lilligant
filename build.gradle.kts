@@ -46,6 +46,35 @@ dependencies {
     modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.2.2")
     modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-level:5.2.2")
     modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-world:5.2.2")
+    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.2.2")
+    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-chunk:5.2.2")
 
     modLocalRuntime("com.ptsmods:devlogin:3.3.2")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+
+            pom {
+                name.set(project.name)
+                description.set("+1 atk +1 def +1 spe")
+                licenses {
+                    license {
+                        name.set("MPL-2.0")
+                        url.set("https://www.mozilla.org/en-US/MPL/2.0/")
+                    }
+                }
+
+                developers {
+                    developer {
+                        id.set("Fuyukai")
+                        name.set("Lura Skye")
+                        url.set("https://veriny.tf")
+                    }
+                }
+            }
+        }
+    }
 }

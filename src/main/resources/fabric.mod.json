@@ -2,7 +2,7 @@
     "schemaVersion": 1,
     "id": "lilligant",
     "name": "Lilligant",
-    "description": "helper library",
+    "description": "+1 atk +1 def +1 spe",
     "version": "0.7.0",
     "authors": [{"name": "Lura Skye", "contact": {"sources": "https://github.com/Fuyukai"}}],
     "license": ["MPL-2.0"],
