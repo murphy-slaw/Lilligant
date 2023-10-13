@@ -14,12 +14,36 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import net.minecraft.world.WorldAccess
 
-public inline fun World.onClient(block: ClientWorld.() -> Unit) {
-    if (isClient) block(this as ClientWorld)
+/**
+ * An easy way to run things on both the server and client worlds in one chain with nicer syntax
+ * than passing two lambdas as parameters
+ */
+@JvmInline
+public value class ChainableWorld(public val world: World) {
+    public inline fun onClient(block: ClientWorld.() -> Unit): ChainableWorld {
+        world.onClient(block)
+        return this
+    }
+
+    public inline fun onServer(block: ServerWorld.() -> Unit): ChainableWorld {
+        world.onServer(block)
+        return this
+    }
 }
 
+/**
+ * Runs the specified [block] on this world if, and only if, it is a client world.
+ */
+public inline fun World.onClient(block: ClientWorld.() -> Unit) {
+    if (isClient && this is ClientWorld) block(this)
+}
+
+/**
+ * Runs the specified [block] on this world if, and only if, it is a server world.
+ */
 public inline fun World.onServer(block: ServerWorld.() -> Unit) {
-    if (!isClient) block(this as ServerWorld)
+    // e.g. create ponder worlds aren't ServerWorlds.
+    if (!isClient && this is ServerWorld) block(this)
 }
 
 /**

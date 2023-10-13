@@ -6,11 +6,9 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
-import net.fabricmc.loom.api.LoomGradleExtensionAPI
-
 
 plugins {
-    id("tf.veriny.gradle.base-plugin").version("0.7.0")
+    id("tf.veriny.gradle.base-plugin").version("0.7.1")
     id("fabric-loom").version("1.4.1")
 }
 

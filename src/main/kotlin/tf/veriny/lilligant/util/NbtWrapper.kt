@@ -29,20 +29,25 @@ public operator fun NbtWrapper.set(key: String, value: UUID): Unit = compound.pu
 
 
 // list wrappers
+/** Sets [key] simply to an NBT list. */
 public operator fun NbtWrapper.set(key: String, value: NbtList) {
     compound.put(key, value)
 }
 
+// yay for jvmname!
+/** Sets [key] to a list of generic [NbtElement]s. */
 @JvmName("NbtWrapper-set#listNbtElement")
 public operator fun NbtWrapper.set(key: String, value: List<NbtElement>) {
     compound.put(key, NbtList().also { it.addAll(value) })
 }
 
+/** Sets [key] to a list of [Identifier]s. */
 @JvmName("NbtWrapper-set#listIdentifier")
 public operator fun NbtWrapper.set(key: String, value: List<Identifier>) {
     compound.put(key, value.mapTo(NbtList()) { NbtString.of(it.toString()) })
 }
 
+/** Sets [key] to a list of JVM strings. */
 @JvmName("NbtWrapper-set#listString")
 public operator fun NbtWrapper.set(key: String, value: List<String>) {
     compound.put(key, value.mapTo(NbtList()) { NbtString.of(it) })
@@ -93,6 +98,10 @@ public inline fun <reified Value> NbtWrapper.getList(key: String): List<Value> {
     }
 }
 
+/**
+ * Gets an [IntList] from the provided key, or empty if there is no such key. Easier to use than
+ * the array form.
+ */
 public fun NbtWrapper.getIntList(key: String): IntList {
     if (!compound.contains(key)) return IntLists.EMPTY_LIST
 
