@@ -25,11 +25,17 @@ public interface EnchantmentEffectInterceptor {
         /**
          * Gets the level of the [enchantment] that the provided [entity] should have. This will
          * return the highest value from the provided interceptors.
+         *
+         * This generally takes priority over the [ItemStack] variant.
          */
         public fun getLevel(entity: LivingEntity, enchantment: Enchantment): Int {
             return INTERCEPTORS.maxOf { it.getEnchantmentLevel(entity, enchantment) }
         }
 
+        /**
+         * Gets the level of the [enchantment] that the provided [stack] should have. This will
+         * return the highest value from the provided interceptors.
+         */
         public fun getLevel(stack: ItemStack, enchantment: Enchantment): Int {
             return INTERCEPTORS.maxOf { it.getEnchantmentLevel(stack, enchantment) }
         }

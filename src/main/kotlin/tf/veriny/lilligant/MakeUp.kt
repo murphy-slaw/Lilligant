@@ -23,7 +23,12 @@ public object MakeUp : ModInitializer {
     override fun onInitialize() {
         LilligantConfig.register()
 
-        EnchantmentEffectInterceptor.addInterceptor(TaggedStatusEnchantmentInterceptor)
-        Registries.ENCHANTMENT.register(id("aerial_affinity"), AerialAffinityEnchantment)
+        if (LilligantConfig.contentConfig.addTagEnchantmentInterceptor) {
+            EnchantmentEffectInterceptor.addInterceptor(TaggedStatusEnchantmentInterceptor)
+        }
+
+        if (LilligantConfig.contentConfig.addAerialAffinity) {
+            Registries.ENCHANTMENT.register(id("aerial_affinity"), AerialAffinityEnchantment)
+        }
     }
 }

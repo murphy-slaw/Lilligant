@@ -1,0 +1,7 @@
+# If true, then the Aerial Affinity enchantment will be registered and the tag for it will
+# function.
+addAerialAffinity = true
+
+# If true, then the default tag enchantment effect interceptor will be registered for allowing
+# tagged status effects to simulate enchantment. Changing this setting requires a game reload.
+addTagEnchantmentInterceptor = true

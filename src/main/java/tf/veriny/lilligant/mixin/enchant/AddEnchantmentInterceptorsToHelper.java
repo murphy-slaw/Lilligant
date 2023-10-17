@@ -18,18 +18,22 @@ import tf.veriny.lilligant.enchant.EnchantmentEffectInterceptor;
 
 @Mixin(EnchantmentHelper.class)
 abstract class AddEnchantmentInterceptorsToHelper {
-    @Inject(method = "getLevel", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "getLevel", at = @At("RETURN"), cancellable = true)
     private static void hisui$getEnchantmentLevel(Enchantment enchantment, ItemStack stack, CallbackInfoReturnable<Integer> cir) {
+        int oldLevel = cir.getReturnValueI();
         int level;
-        if ((level = EnchantmentEffectInterceptor.Companion.getLevel(stack, enchantment)) > 0) {
+
+        if ((level = EnchantmentEffectInterceptor.Companion.getLevel(stack, enchantment)) > oldLevel) {
             cir.setReturnValue(level);
         }
     }
 
-    @Inject(method = "getEquipmentLevel", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "getEquipmentLevel", at = @At("RETURN"), cancellable = true)
     private static void hisui$getEnchantmentLevelPlayer(Enchantment enchantment, LivingEntity entity, CallbackInfoReturnable<Integer> cir) {
+        int oldLevel = cir.getReturnValueI();
         int level;
-        if ((level = EnchantmentEffectInterceptor.Companion.getLevel(entity, enchantment)) > 0) {
+
+        if ((level = EnchantmentEffectInterceptor.Companion.getLevel(entity, enchantment)) > oldLevel) {
             cir.setReturnValue(level);
         }
     }

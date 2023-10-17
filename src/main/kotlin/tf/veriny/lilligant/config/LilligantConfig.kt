@@ -14,6 +14,9 @@ public data class EntityBlockerConfig(
     /** The list of entity IDs to block from creation. */
     public val blockedEntities: List<Identifier>
 ) {
+    /**
+     * Checks if the provided [EntityType] should be blocked from spawning.
+     */
     public fun shouldBlock(type: EntityType<*>): Boolean {
 
         // the loot table ID is always cached on the entitytype, it's just the entity id with
@@ -30,6 +33,13 @@ public data class EntityBlockerConfig(
     }
 }
 
+public data class ContentConfiguration(
+    /** If true, then the Aerial Affinity enchantment will be added to the game. */
+    public val addAerialAffinity: Boolean,
+    /** Adds the tag enchantment interceptor. */
+    public val addTagEnchantmentInterceptor: Boolean,
+)
+
 /**
  * Central configuration used by Lilligant.
  */
@@ -37,6 +47,11 @@ public object LilligantConfig : ConfigContainer("lilligant") {
     public val entityBlockerConfig: EntityBlockerConfig by delegate(
         "entity_blocker",
         LilligantConfig::class.java.getResourceAsStream("/config/entity_blocker.toml")!!
+    )
+
+    public val contentConfig: ContentConfiguration by delegate(
+        "content",
+        LilligantConfig::class.java.getResourceAsStream("/config/content.toml")!!
     )
 
     override fun afterReload(server: MinecraftServer?) {
