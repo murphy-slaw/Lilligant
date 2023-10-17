@@ -1,0 +1,5 @@
+## A simple entity blocker that prevents certain entities from spawning.
+
+# The list of entities to block, e.g. ``["minecraft:villager"]``.
+blockedEntities = [
+]

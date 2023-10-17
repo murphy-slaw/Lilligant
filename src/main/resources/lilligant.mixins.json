@@ -5,6 +5,7 @@
     "mixins": [
         "enchant.AddEnchantmentInterceptorsToHelper",
         "enchant.ImplAerialAffinity",
+        "entityblock.DontAllowAddingEntities",
         "peai.ImplPEAIMiningSpeed",
         "peai.ImplPEAISuitableFor"
     ]

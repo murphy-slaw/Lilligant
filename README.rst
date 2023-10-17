@@ -1,12 +1,12 @@
 Lilligant
 =========
 
-This is my library mod.
+This is my library and utility mod.
 
 Installation
-------------
+~~~~~~~~~~~~
 
-This is JIJ'd into all my mods, so don't worry about it. For devs, you can get it like so:
+For devs, you can get it like so:
 
 .. code-block:: kotlin
 
@@ -20,14 +20,32 @@ This is JIJ'd into all my mods, so don't worry about it. For devs, you can get i
         modApi("tf.veriny.unova:lilligant:0.7.0")
     }
 
+Features
+~~~~~~~~
+
+Transitive Dependencies
+-----------------------
+
+Lilligant exposes Cardinal Components and `ooo lib <https://modrinth.com/mod/owo-lib>`_ as
+transitive API dependencies for developer convenience. Downstream mods still need to add a
+dependency on them.
+
+``PlayerEntity``-aware items
+----------------------------
+
+The ``PlayerEntityAwareItem`` interface can be implemented on items to give access to two extra
+methods that are PlayerEntity-aware:
+
+- ``isSuitableFor(ItemStack, PlayerEntity, BlockState)``
+- ``getMiningSpeedMultiplier(ItemStack, PlayerEntity, BlockState)``
+
+See the interface documentation for more details.
+
 Config
 ------
 
-See the ``SimpleConfig`` class, but tl;dr:
-
-- ``SimpleConfig#load`` loads a TOML config, using the provided default config for unprovided
-  values.
-- ``SimpleConfig#save`` saves a TOML config.
+See the ``SimpleConfig`` class and extensions. Also see ``ConfigContainer``, which uses Kotlin
+delegates to simplify having your config objects automatically reload.
 
 This is also done via JIJ'ing the TOML library. No extra setup required. Works on both fucking
 sides!
@@ -36,7 +54,7 @@ Enchantments
 ------------
 
 Lilligant adds a new ``Aerial Affinity`` enchantment which can be placed on a helmet to reduce the
-normal on-ground speed penalty that you get when mining.
+normal on-ground speed penalty that you get when mining. This can be disabled in the configuration.
 
 Lilligant hooks into how enchantment levels are calculated, allowing you to pretend like a player
 or an item has an enchantment (when they really don't). Implement ``EnchantmentEffectInterceptor``
@@ -51,3 +69,10 @@ simulated if you have a status effect that is in a specific ``mob_effect`` tag.
   This has no default tag entries.
 - ``lilligant:gives_aerial_affinity`` - Acts as if you have the Aerial Affinity enchantment effect.
   By default, this contains the Slow Falling status effect and the Levitation status effect.
+
+Entity Blocking
+---------------
+
+Lilligant blocks entities from spawning at the lowest level - the entity manager - meaning that
+entities are well and truly unable to spawn. This is configurable in the ``entity_blocker.toml``
+configuration file.

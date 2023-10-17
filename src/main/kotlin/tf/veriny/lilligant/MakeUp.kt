@@ -9,6 +9,7 @@ package tf.veriny.lilligant
 import net.fabricmc.api.ModInitializer
 import net.minecraft.registry.Registries
 import net.minecraft.util.Identifier
+import tf.veriny.lilligant.config.LilligantConfig
 import tf.veriny.lilligant.enchant.AerialAffinityEnchantment
 import tf.veriny.lilligant.enchant.EnchantmentEffectInterceptor
 import tf.veriny.lilligant.enchant.TaggedStatusEnchantmentInterceptor
@@ -20,6 +21,8 @@ public object MakeUp : ModInitializer {
     }
 
     override fun onInitialize() {
+        LilligantConfig.register()
+
         EnchantmentEffectInterceptor.addInterceptor(TaggedStatusEnchantmentInterceptor)
         Registries.ENCHANTMENT.register(id("aerial_affinity"), AerialAffinityEnchantment)
     }
