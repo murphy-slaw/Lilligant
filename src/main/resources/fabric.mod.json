@@ -9,6 +9,7 @@
     "icon": "assets/lilligant/icon.png",
 
     "mixins": ["lilligant.mixins.json"],
+    "accessWidener": "lilligant.accesswidener",
 
     "entrypoints": {
         "main": [{"adapter": "kotlin", "value": "tf.veriny.lilligant.MakeUp"}]

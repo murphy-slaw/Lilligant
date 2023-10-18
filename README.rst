@@ -76,3 +76,10 @@ Entity Blocking
 Lilligant blocks entities from spawning at the lowest level - the entity manager - meaning that
 entities are well and truly unable to spawn. This is configurable in the ``entity_blocker.toml``
 configuration file.
+
+Sniffer Cooldown Adjustment
+---------------------------
+
+The ``snifferCooldown`` parameter in the content configuration can be used to customise how many
+ticks a Sniffer will be on cooldown after sniffing something up, making it easier to make Sniffer
+farms for e.g. torchflowers.

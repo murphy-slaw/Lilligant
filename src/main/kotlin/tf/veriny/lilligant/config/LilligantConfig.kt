@@ -38,6 +38,8 @@ public data class ContentConfiguration(
     public val addAerialAffinity: Boolean,
     /** Adds the tag enchantment interceptor. */
     public val addTagEnchantmentInterceptor: Boolean,
+    /** The ticks for the sniffer's cooldown. */
+    public val snifferCooldown: Long,
 )
 
 /**

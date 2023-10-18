@@ -16,6 +16,7 @@ import cc.ekblad.toml.tomlMapper
 import cc.ekblad.toml.util.InternalAPI
 import net.fabricmc.loader.api.FabricLoader
 import net.minecraft.util.Identifier
+import org.apache.logging.log4j.LogManager
 import java.nio.file.LinkOption
 import java.nio.file.Path
 import kotlin.io.path.*
@@ -26,6 +27,7 @@ import kotlin.reflect.full.createType
  * Namespace for configuration helpers.
  */
 public /*namespace*/ object SimpleConfig {
+    internal val LOGGER = LogManager.getLogger(SimpleConfig::class.java)
 
     private val mapper = tomlMapper {
         // this is fucking awful lol
@@ -138,6 +140,10 @@ public fun <T : Any> SimpleConfig.loadSafely(
             path.writer(Charsets.UTF_8).use { it.write(defaultContent) }
         }
         is LoadedMissingProperties -> {
+            LOGGER.warn(
+                "Configuration for ${modId}/${configName} has new properties " +
+                "that need to be configured!"
+            )
             val newName = path.name + ".new.${defaultContent.hashCode()}"
             val newPath = path.parent.resolve(newName)
             if (!newPath.exists()) {

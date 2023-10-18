@@ -5,3 +5,6 @@ addAerialAffinity = true
 # If true, then the default tag enchantment effect interceptor will be registered for allowing
 # tagged status effects to simulate enchantment. Changing this setting requires a game reload.
 addTagEnchantmentInterceptor = true
+
+# The number of ticks for the Sniffer's cooldown. The default vanilla value is 9600.
+snifferCooldown = 9600

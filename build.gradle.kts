@@ -20,6 +20,8 @@ loom.runs.named("client") {
     programArgs("--mimicPlayer", project.properties["fabricMimicPlayer"].toString())
 }
 
+loom.accessWidenerPath.set(rootProject.file("src/main/resources/lilligant.accesswidener"))
+
 dependencies {
     "minecraft"("com.mojang:minecraft:1.20.1")
 
