@@ -23,7 +23,6 @@ import net.minecraft.util.Identifier
 @Suppress("unused")  // again, type safety
 public interface Komponent<Target : Any> : Component {
     public fun readFromNbt(tag: NbtWrapper)
-
     public fun writeToNbt(tag: NbtWrapper)
 
     override fun readFromNbt(tag: NbtCompound): Unit = readFromNbt(NbtWrapper(tag))
