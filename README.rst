@@ -17,7 +17,7 @@ For devs, you can get it like so:
     }
 
     dependencies {
-        modApi("tf.veriny.unova:lilligant:0.7.0")
+        modApi("tf.veriny.unova:lilligant:0.7.1")
     }
 
 Features
@@ -83,3 +83,10 @@ Sniffer Cooldown Adjustment
 The ``snifferCooldown`` parameter in the content configuration can be used to customise how many
 ticks a Sniffer will be on cooldown after sniffing something up, making it easier to make Sniffer
 farms for e.g. torchflowers.
+
+Portal Blocking
+---------------
+
+Lilligant adds a small API that can prevent portals from forming based on overworld conditions.
+It also includes a built-in handler that stops portals from working based on height (disabled
+by default). See the ``NetherPortalFormationInterceptor`` class for more information.

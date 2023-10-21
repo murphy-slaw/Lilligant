@@ -10,6 +10,7 @@ import net.minecraft.block.Block
 import net.minecraft.block.BlockState
 import net.minecraft.client.world.ClientWorld
 import net.minecraft.server.world.ServerWorld
+import net.minecraft.text.Text
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import net.minecraft.world.WorldAccess
@@ -34,16 +35,36 @@ public value class ChainableWorld(public val world: World) {
 /**
  * Runs the specified [block] on this world if, and only if, it is a client world.
  */
-public inline fun World.onClient(block: ClientWorld.() -> Unit) {
+public inline fun WorldAccess.onClient(block: ClientWorld.() -> Unit) {
     if (isClient && this is ClientWorld) block(this)
 }
 
 /**
  * Runs the specified [block] on this world if, and only if, it is a server world.
  */
-public inline fun World.onServer(block: ServerWorld.() -> Unit) {
+public inline fun WorldAccess.onServer(block: ServerWorld.() -> Unit) {
     // e.g. create ponder worlds aren't ServerWorlds.
     if (!isClient && this is ServerWorld) block(this)
+}
+
+/**
+ * Checks if this world is the overworld.
+ */
+public fun World.isOverworld(): Boolean {
+    return registryKey === World.OVERWORLD
+}
+
+/**
+ * Notifies all players in the specified [range] from the [basePos] with a specific [message].
+ */
+public fun WorldAccess.notifyInRange(
+    basePos: BlockPos, range: Double, message: Text
+): Unit = onServer {
+    players
+        .asSequence()
+        .filterNot { it.isSpectator }
+        .filter { it.blockPos.getSquaredDistance(basePos) <= range }
+        .forEach { it.sendSystemMessage(message) }
 }
 
 /**

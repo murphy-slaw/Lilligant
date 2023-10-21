@@ -8,6 +8,8 @@
         "entityblock.DontAllowAddingEntities",
         "peai.ImplPEAIMiningSpeed",
         "peai.ImplPEAISuitableFor",
+        "portalblock.DestroyExistingPortals",
+        "portalblock.InterceptPortalCreation",
         "sniffer.MakeSnifferCooldownConfigurable",
         "sweetberrybush.SweetBerriesDontSlow"
     ]

@@ -8,3 +8,10 @@ addTagEnchantmentInterceptor = true
 
 # The number of ticks for the Sniffer's cooldown. The default vanilla value is 9600.
 snifferCooldown = 9600
+
+[portalFormation]
+# If true, enables the height-based Nether Portal interceptor. This ain't for you.
+enableHeightBasedInterceptor = false
+
+maxPortalWorldHeight = -1000
+minPortalWorldHeight = -1030

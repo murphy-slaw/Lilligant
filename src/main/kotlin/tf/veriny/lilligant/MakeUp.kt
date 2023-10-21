@@ -13,6 +13,8 @@ import tf.veriny.lilligant.config.LilligantConfig
 import tf.veriny.lilligant.enchant.AerialAffinityEnchantment
 import tf.veriny.lilligant.enchant.EnchantmentEffectInterceptor
 import tf.veriny.lilligant.enchant.TaggedStatusEnchantmentInterceptor
+import tf.veriny.lilligant.portal.HeightBasedPortalInterceptor
+import tf.veriny.lilligant.portal.NetherPortalFormationInterceptor
 import tf.veriny.lilligant.registry.register
 
 public object MakeUp : ModInitializer {
@@ -22,6 +24,7 @@ public object MakeUp : ModInitializer {
 
     override fun onInitialize() {
         LilligantConfig.register()
+        NetherPortalFormationInterceptor.addInterceptor(HeightBasedPortalInterceptor)
 
         if (LilligantConfig.contentConfig.addTagEnchantmentInterceptor) {
             EnchantmentEffectInterceptor.addInterceptor(TaggedStatusEnchantmentInterceptor)

@@ -46,7 +46,16 @@ public data class ContentConfiguration(
     public val addTagEnchantmentInterceptor: Boolean,
     /** The ticks for the sniffer's cooldown. */
     public val snifferCooldown: Long,
-)
+
+    /** Configuration for the default portal formation interceptor. */
+    public val portalFormation: PortalFormationConfig,
+) {
+    public data class PortalFormationConfig(
+        public val enableHeightBasedInterceptor: Boolean,
+        public val maxPortalWorldHeight: Int,
+        public val minPortalWorldHeight: Int,
+    )
+}
 
 /**
  * Central configuration used by Lilligant.
