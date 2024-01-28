@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "tf.veriny.unova"
-version = "0.7.2"
+version = "0.7.3"
 
 loom.runs.named("client") {
     isIdeConfigGenerated = true
