@@ -26,7 +26,7 @@ Features
 Transitive Dependencies
 -----------------------
 
-Lilligant exposes Cardinal Components and `ooo lib <https://modrinth.com/mod/owo-lib>`_ as
+Lilligant exposes Cardinal Components as
 transitive API dependencies for developer convenience. Downstream mods still need to add a
 dependency on them.
 
@@ -90,3 +90,15 @@ Portal Blocking
 Lilligant adds a small API that can prevent portals from forming based on overworld conditions.
 It also includes a built-in handler that stops portals from working based on height (disabled
 by default). See the ``NetherPortalFormationInterceptor`` class for more information.
+
+Narrator Error Suppression
+--------------------------
+
+Lilligant automatically suppresses the log on startup caused by a missing ``libflite.so``.
+
+Peaceful Mode Enforcement
+-------------------------
+
+Lilligant adds a new configuration option to allow forcing peaceful mode. This locks the difficulty
+to Peaceful both in-game and during world creation.
+

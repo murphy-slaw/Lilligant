@@ -9,6 +9,10 @@ addTagEnchantmentInterceptor = true
 # The number of ticks for the Sniffer's cooldown. The default vanilla value is 9600.
 snifferCooldown = 9600
 
+# If True, Peaceful mode will be enforced. The player will not be able to change difficulty in any
+# form.
+forcePeaceful = true
+
 [portalFormation]
 # If true, enables the height-based Nether Portal interceptor. This ain't for you.
 enableHeightBasedInterceptor = false

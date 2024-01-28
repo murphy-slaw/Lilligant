@@ -16,7 +16,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class DontSpamNarratorErrors {
     @Redirect(
         method = "<init>",
-        at = @At(value = "INVOKE", target = "Lcom/mojang/text2speech/Narrator;getNarrator()Lcom/mojang/text2speech/Narrator;")
+        at = @At(value = "INVOKE", target = "Lcom/mojang/text2speech/Narrator;getNarrator()Lcom/mojang/text2speech/Narrator;"),
+        remap = false
     )
     @Nullable Narrator lessSpammyGetNarrator() {
         if (OperatingSystem.get() != OperatingSystem.LINUX) {

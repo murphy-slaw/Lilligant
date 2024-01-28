@@ -6,13 +6,9 @@
 
 package tf.veriny.lilligant.config
 
-import cc.ekblad.toml.util.TomlName
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents.EndDataPackReload
-import net.minecraft.entity.Entity
 import net.minecraft.entity.EntityType
 import net.minecraft.entity.LivingEntity
 import net.minecraft.registry.Registries
-import net.minecraft.resource.AutoCloseableResourceManager
 import net.minecraft.server.MinecraftServer
 import net.minecraft.util.Identifier
 
@@ -46,6 +42,9 @@ public data class ContentConfiguration(
     public val addTagEnchantmentInterceptor: Boolean,
     /** The ticks for the sniffer's cooldown. */
     public val snifferCooldown: Long,
+
+    /** If True, then peaceful mode will be forced. */
+    public val forcePeaceful: Boolean,
 
     /** Configuration for the default portal formation interceptor. */
     public val portalFormation: PortalFormationConfig,

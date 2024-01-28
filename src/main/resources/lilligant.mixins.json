@@ -3,6 +3,7 @@
     "minVersion": "0.8.5",
     "required": true,
     "mixins": [
+        "defaultsettings.EnforcePeacefulInGame",
         "enchant.AddEnchantmentInterceptorsToHelper",
         "enchant.ImplAerialAffinity",
         "entityblock.DontAllowAddingEntities",
@@ -14,6 +15,8 @@
         "sweetberrybush.SweetBerriesDontSlow"
     ],
     "client": [
+        "defaultsettings.EnforcePeacefulOnWorldCreationScreen",
+        "defaultsettings.LockDifficultyButtonOnWorldCreateScreen",
         "narrator.DontSpamNarratorErrors"
     ]
 }
