@@ -8,8 +8,8 @@
 
 
 plugins {
-    id("tf.veriny.gradle.base-plugin").version("0.7.1")
-    id("fabric-loom").version("1.4.1")
+    id("tf.veriny.gradle.base-plugin").version("0.7.2")
+    id("fabric-loom").version("1.5.7")
 }
 
 group = "tf.veriny.unova"
@@ -37,11 +37,7 @@ dependencies {
 
     modImplementation("net.fabricmc:fabric-loader:0.14.22")
     modImplementation("net.fabricmc.fabric-api:fabric-api:0.90.0+1.20.1")
-    modImplementation("net.fabricmc:fabric-language-kotlin:1.10.10+kotlin.1.9.10")
-
-    modApi("io.wispforest:owo-lib:0.11.2-pre.14+1.20") {
-        exclude(group = "net.fabricmc.fabric-api")
-    }
+    modImplementation("net.fabricmc:fabric-language-kotlin:1.10.17+kotlin.1.9.22")
 
     modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.2.2")
     modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-level:5.2.2")

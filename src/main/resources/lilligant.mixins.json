@@ -12,5 +12,8 @@
         "portalblock.InterceptPortalCreation",
         "sniffer.MakeSnifferCooldownConfigurable",
         "sweetberrybush.SweetBerriesDontSlow"
+    ],
+    "client": [
+        "narrator.DontSpamNarratorErrors"
     ]
 }
