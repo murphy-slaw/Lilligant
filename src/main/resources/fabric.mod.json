@@ -12,7 +12,10 @@
     "accessWidener": "lilligant.accesswidener",
 
     "entrypoints": {
-        "main": [{"adapter": "kotlin", "value": "tf.veriny.lilligant.MakeUp"}]
+        "main": [
+            {"adapter": "kotlin", "value": "tf.veriny.lilligant.MakeUp"},
+            {"adapter": "kotlin", "value": "tf.veriny.lilligant.pebkac.IdiotJvmArgsEntrypoint"}
+        ]
     },
 
     "depends": {

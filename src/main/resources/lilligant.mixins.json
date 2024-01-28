@@ -17,6 +17,7 @@
     "client": [
         "defaultsettings.EnforcePeacefulOnWorldCreationScreen",
         "defaultsettings.LockDifficultyButtonOnWorldCreateScreen",
+        "jvmargs.InjectArgumentsWarningScreen",
         "narrator.DontSpamNarratorErrors"
     ]
 }

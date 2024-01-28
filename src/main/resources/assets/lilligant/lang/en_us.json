@@ -1,4 +1,8 @@
 {
     "text.lilligant.portal.too_high": "Portal is too high to form",
-    "text.lilligant.portal.too_low": "Portal is too low to form"
+    "text.lilligant.portal.too_low": "Portal is too low to form",
+
+    "lilligant.pebkac.title": "Stop messing with your JVM args",
+    "lilligant.pebkac.message": "Bad JVM arguments detected. Stop changing your JVM args. You don't know what you're doing. I won't tell you which ones because you'll just remove them but keep all the rest of the terrible args.",
+    "lilligant.pebkac.confirm": "I will delete my custom arguments"
 }
