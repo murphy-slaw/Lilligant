@@ -46,6 +46,9 @@ public data class ContentConfiguration(
     /** If True, then peaceful mode will be forced. */
     public val forcePeaceful: Boolean,
 
+    /** If True, the recipe book will be disabled. */
+    public val disableRecipeBook: Boolean,
+
     /** Configuration for the default portal formation interceptor. */
     public val portalFormation: PortalFormationConfig,
 ) {

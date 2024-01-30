@@ -13,6 +13,9 @@ snifferCooldown = 9600
 # form.
 forcePeaceful = true
 
+# If True, the recipe book will be entirely disabled. Prevents those annoying popups.
+disableRecipeBook = true
+
 [portalFormation]
 # If true, enables the height-based Nether Portal interceptor. This ain't for you.
 enableHeightBasedInterceptor = false
