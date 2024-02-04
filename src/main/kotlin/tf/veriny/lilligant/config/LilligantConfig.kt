@@ -49,6 +49,9 @@ public data class ContentConfiguration(
     /** If True, the recipe book will be disabled. */
     public val disableRecipeBook: Boolean,
 
+    /** See config file. */
+    public val applyDefaultGameRules: Boolean,
+
     /** Configuration for the default portal formation interceptor. */
     public val portalFormation: PortalFormationConfig,
 ) {

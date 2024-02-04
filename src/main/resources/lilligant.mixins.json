@@ -3,6 +3,7 @@
     "minVersion": "0.8.5",
     "required": true,
     "mixins": [
+        "defaultrules.SetDefaultGameRules",
         "deletespawners.MakeMobSpawnersRemoveThemselves",
         "enchant.AddEnchantmentInterceptorsToHelper",
         "enchant.ImplAerialAffinity",

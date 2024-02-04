@@ -16,6 +16,10 @@ forcePeaceful = true
 # If True, the recipe book will be entirely disabled. Prevents those annoying popups.
 disableRecipeBook = true
 
+# If True, a default set of game rules will be set. This is tailored specifically towards
+# Bigger Industrialisation; if you're using Lilligant in another pack you should disable this.
+applyDefaultGameRules = true
+
 [portalFormation]
 # If true, enables the height-based Nether Portal interceptor. This ain't for you.
 enableHeightBasedInterceptor = false
