@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package tf.veriny.lilligant.mixin.defaultsettings;
+package tf.veriny.lilligant.mixin.mandatorypeaceful;
 
 import net.minecraft.client.gui.screen.world.CreateWorldScreen;
 import net.minecraft.client.world.WorldCreator;

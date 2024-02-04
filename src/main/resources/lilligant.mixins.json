@@ -3,11 +3,11 @@
     "minVersion": "0.8.5",
     "required": true,
     "mixins": [
-        "defaultsettings.EnforcePeacefulInGame",
         "deletespawners.MakeMobSpawnersRemoveThemselves",
         "enchant.AddEnchantmentInterceptorsToHelper",
         "enchant.ImplAerialAffinity",
         "entityblock.DontAllowAddingEntities",
+        "mandatorypeaceful.EnforcePeacefulInGame",
         "peai.ImplPEAIMiningSpeed",
         "peai.ImplPEAISuitableFor",
         "portalblock.DestroyExistingPortals",
@@ -17,9 +17,9 @@
         "sweetberrybush.SweetBerriesDontSlow"
     ],
     "client": [
-        "defaultsettings.EnforcePeacefulOnWorldCreationScreen",
-        "defaultsettings.LockDifficultyButtonOnWorldCreateScreen",
         "jvmargs.InjectArgumentsWarningScreen",
+        "mandatorypeaceful.EnforcePeacefulOnWorldCreationScreen",
+        "mandatorypeaceful.LockDifficultyButtonOnWorldCreateScreen",
         "narrator.DontSpamNarratorErrors",
         "recipebook.RemoveClientSideBookWidget"
     ]
