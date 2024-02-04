@@ -4,6 +4,7 @@
     "required": true,
     "mixins": [
         "defaultsettings.EnforcePeacefulInGame",
+        "deletespawners.MakeMobSpawnersRemoveThemselves",
         "enchant.AddEnchantmentInterceptorsToHelper",
         "enchant.ImplAerialAffinity",
         "entityblock.DontAllowAddingEntities",

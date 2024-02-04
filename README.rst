@@ -100,7 +100,8 @@ Peaceful Mode Enforcement
 -------------------------
 
 Lilligant adds a new configuration option to allow forcing peaceful mode. This locks the difficulty
-to Peaceful both in-game and during world creation.
+to Peaceful both in-game and during world creation, and makes mob spawners automatically delete
+themselves on tick as a small micro-optimisation.
 
 JVM Argument Checking
 ---------------------
