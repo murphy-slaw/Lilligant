@@ -108,3 +108,9 @@ JVM Argument Checking
 
 Lilligant adds a warning screen that warns the player if they've added useless (-XX:+EnableG1GC)
 or harmful (-XX:MaxTenuringThreshold=1, which copies all the BlockPos/Vec3 spam to G1 oldgen, BAD).
+
+Auto-Kill Ender Dragon
+----------------------
+
+On peaceful mode, the ender dragon will be automatically killed. An end portal and end gateway will
+be generated like normal.

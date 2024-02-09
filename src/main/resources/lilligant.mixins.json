@@ -5,6 +5,7 @@
     "mixins": [
         "defaultrules.SetDefaultGameRules",
         "deletespawners.MakeMobSpawnersRemoveThemselves",
+        "dragon.PreventDragonBeingAdded",
         "enchant.AddEnchantmentInterceptorsToHelper",
         "enchant.ImplAerialAffinity",
         "entityblock.DontAllowAddingEntities",
