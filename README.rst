@@ -12,12 +12,13 @@ For devs, you can get it like so:
 
     plugins {
         // Sets up Kotlin, Spotless, and various Maven repositories.
-        id("tf.veriny.gradle.base-plugin").version("0.7.1")
+        // Add ``maven.veriny.tf`` to your plugin repository.
+        id("tf.veriny.gradle.base-plugin").version("0.7.2")
         id("fabric-loom").version("1.4.1")
     }
 
     dependencies {
-        modApi("tf.veriny.unova:lilligant:0.7.1")
+        modApi("tf.veriny.unova:lilligant:0.7.4")
     }
 
 Features
