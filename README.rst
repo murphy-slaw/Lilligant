@@ -23,12 +23,10 @@ For devs, you can get it like so:
 Features
 ~~~~~~~~
 
-Transitive Dependencies
------------------------
+Sweet Berry Bushes no longer slow
+---------------------------------
 
-Lilligant exposes Cardinal Components as
-transitive API dependencies for developer convenience. Downstream mods still need to add a
-dependency on them.
+Sweet berry bushes will never slow the player anymore.
 
 ``PlayerEntity``-aware items
 ----------------------------

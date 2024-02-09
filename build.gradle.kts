@@ -39,12 +39,6 @@ dependencies {
     modImplementation("net.fabricmc.fabric-api:fabric-api:0.90.0+1.20.1")
     modImplementation("net.fabricmc:fabric-language-kotlin:1.10.17+kotlin.1.9.22")
 
-    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.2.2")
-    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-level:5.2.2")
-    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-world:5.2.2")
-    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.2.2")
-    modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-chunk:5.2.2")
-
     modLocalRuntime("com.ptsmods:devlogin:3.3.2")
 }
 
