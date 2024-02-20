@@ -10,10 +10,12 @@
 plugins {
     id("tf.veriny.gradle.base-plugin").version("0.7.2")
     id("fabric-loom").version("1.5.7")
+    id("com.palantir.git-version").version("3.0.0")
 }
 
 group = "tf.veriny.unova"
-version = "0.7.4"
+val gitVersion: groovy.lang.Closure<String> by extra
+version = gitVersion()
 
 loom.runs.named("client") {
     isIdeConfigGenerated = true
