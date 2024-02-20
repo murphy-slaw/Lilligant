@@ -9,6 +9,7 @@
         "enchant.AddEnchantmentInterceptorsToHelper",
         "enchant.ImplAerialAffinity",
         "entityblock.DontAllowAddingEntities",
+        "flowerplanting.AddMoreGenericFlowerPlantingTag",
         "mandatorypeaceful.EnforcePeacefulInGame",
         "peai.ImplPEAIMiningSpeed",
         "peai.ImplPEAISuitableFor",

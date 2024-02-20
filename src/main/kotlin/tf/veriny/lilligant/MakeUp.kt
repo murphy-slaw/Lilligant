@@ -7,7 +7,10 @@
 package tf.veriny.lilligant
 
 import net.fabricmc.api.ModInitializer
+import net.minecraft.block.Block
 import net.minecraft.registry.Registries
+import net.minecraft.registry.RegistryKeys
+import net.minecraft.registry.tag.TagKey
 import net.minecraft.util.Identifier
 import tf.veriny.lilligant.config.LilligantConfig
 import tf.veriny.lilligant.enchant.AerialAffinityEnchantment
@@ -21,6 +24,11 @@ public object MakeUp : ModInitializer {
     public fun id(name: String): Identifier {
         return Identifier("lilligant", name)
     }
+
+    /** Tag for flower blocks that should have plant logic overriden. */
+    public val OVERRIDE_PLANT_CHECK: TagKey<Block> = TagKey.of(RegistryKeys.BLOCK, id("override_plant_check"))
+    /** Tag for valid blocks that plants in the previous tag can be placed on. */
+    public val FLOWER_PLANT_BLOCKS: TagKey<Block> = TagKey.of(RegistryKeys.BLOCK, id("flower_plant_blocks"))
 
     override fun onInitialize() {
         LilligantConfig.register()
