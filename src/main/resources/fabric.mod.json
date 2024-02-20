@@ -3,7 +3,7 @@
     "id": "lilligant",
     "name": "Lilligant",
     "description": "+1 atk +1 def +1 spe",
-    "version": "0.0.0",
+    "version": "${version}",
     "authors": [{"name": "Lura Skye", "contact": {"sources": "https://github.com/Fuyukai"}}],
     "license": ["MPL-2.0"],
     "icon": "assets/lilligant/icon.png",

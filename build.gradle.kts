@@ -44,6 +44,11 @@ dependencies {
     modLocalRuntime("com.ptsmods:devlogin:3.3.2")
 }
 
+tasks.named<ProcessResources>("processResources") {
+    inputs.property("version") { project.version }
+    filesMatching("fabric.mod.json") { expand("version" to project.version) }
+}
+
 publishing {
     publications {
         create<MavenPublication>("maven") {
