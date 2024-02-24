@@ -113,3 +113,9 @@ Auto-Kill Ender Dragon
 
 On peaceful mode, the ender dragon will be automatically killed. An end portal and end gateway will
 be generated like normal.
+
+Wayland Fixes
+-------------
+
+Lilligant patches a handful of Blaze3D methods to support booting on Wayland natively if a GLFW
+version built for Wayland is used (e.g. 3.4.).
