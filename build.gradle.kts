@@ -15,7 +15,7 @@ plugins {
 
 group = "tf.veriny.unova"
 val gitVersion: groovy.lang.Closure<String> by extra
-version = gitVersion()
+version = gitVersion().drop(1)  // we tag with v0.7.x
 
 loom.runs.named("client") {
     isIdeConfigGenerated = true
