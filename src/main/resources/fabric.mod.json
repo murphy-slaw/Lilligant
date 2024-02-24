@@ -15,7 +15,8 @@
         "main": [
             {"adapter": "kotlin", "value": "tf.veriny.lilligant.MakeUp"},
             {"adapter": "kotlin", "value": "tf.veriny.lilligant.pebkac.IdiotJvmArgsEntrypoint"}
-        ]
+        ],
+        "preLaunch": [{"adapter": "kotlin", "value": "tf.veriny.lilligant.pack.MetadataEntrypoint"}]
     },
 
     "depends": {
