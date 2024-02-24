@@ -24,6 +24,8 @@
         "mandatorypeaceful.EnforcePeacefulOnWorldCreationScreen",
         "mandatorypeaceful.LockDifficultyButtonOnWorldCreateScreen",
         "narrator.DontSpamNarratorErrors",
+        "onwayland.NullifySetIcon",
+        "onwayland.SetWaylandAppId",
         "recipebook.RemoveClientSideBookWidget"
     ]
 }
