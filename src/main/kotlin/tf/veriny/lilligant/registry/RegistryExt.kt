@@ -11,7 +11,6 @@ import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
-import net.minecraft.registry.tag.TagKey
 import net.minecraft.util.Identifier
 
 
@@ -22,7 +21,8 @@ public fun <T> Registry<T>.register(id: Identifier, what: T): T =
 /**
  * Registers a block with an item form.
  */
-public fun <T : Block> registerBlock(id: Identifier, block: T) {
+public fun <T : Block> registerBlock(id: Identifier, block: T): T {
     Registries.BLOCK.register(id, block)
     Registries.ITEM.register(id, BlockItem(block, Item.Settings()))
+    return block
 }

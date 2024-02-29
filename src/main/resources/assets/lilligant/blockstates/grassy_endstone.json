@@ -1,0 +1,24 @@
+{
+    "variants": {
+        "snowy=false": [
+            {
+                "model": "lilligant:block/grassy_endstone"
+            },
+            {
+                "model": "lilligant:block/grassy_endstone",
+                "y": 90
+            },
+            {
+                "model": "lilligant:block/grassy_endstone",
+                "y": 180
+            },
+            {
+                "model": "lilligant:block/grassy_endstone",
+                "y": 270
+            }
+        ],
+        "snowy=true": {
+            "model": "minecraft:block/grass_block_snow"
+        }
+    }
+}

@@ -16,6 +16,9 @@
             {"adapter": "kotlin", "value": "tf.veriny.lilligant.MakeUp"},
             {"adapter": "kotlin", "value": "tf.veriny.lilligant.pebkac.IdiotJvmArgsEntrypoint"}
         ],
+        "client": [
+            {"adapter": "kotlin", "value": "tf.veriny.lilligant.ClientMakeUp"}
+        ],
         "preLaunch": [{"adapter": "kotlin", "value": "tf.veriny.lilligant.pack.MetadataEntrypoint"}]
     },
 
