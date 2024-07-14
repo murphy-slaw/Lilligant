@@ -7,14 +7,10 @@
 package tf.veriny.lilligant
 
 import net.fabricmc.api.ModInitializer
-import net.minecraft.block.AbstractBlock
 import net.minecraft.block.Block
-import net.minecraft.block.GrassBlock
-import net.minecraft.block.MapColor
 import net.minecraft.registry.Registries
 import net.minecraft.registry.RegistryKeys
 import net.minecraft.registry.tag.TagKey
-import net.minecraft.sound.BlockSoundGroup
 import net.minecraft.util.Identifier
 import tf.veriny.lilligant.config.LilligantConfig
 import tf.veriny.lilligant.enchant.AerialAffinityEnchantment
@@ -23,7 +19,6 @@ import tf.veriny.lilligant.enchant.TaggedStatusEnchantmentInterceptor
 import tf.veriny.lilligant.portal.HeightBasedPortalInterceptor
 import tf.veriny.lilligant.portal.NetherPortalFormationInterceptor
 import tf.veriny.lilligant.registry.register
-import tf.veriny.lilligant.registry.registerBlock
 
 public object MakeUp : ModInitializer {
     public fun id(name: String): Identifier {
@@ -38,14 +33,6 @@ public object MakeUp : ModInitializer {
     override fun onInitialize() {
         LilligantConfig.register()
         NetherPortalFormationInterceptor.addInterceptor(HeightBasedPortalInterceptor)
-
-        registerBlock(
-            id("grassy_endstone"),
-            GrassBlock(
-                AbstractBlock.Settings.create().mapColor(MapColor.GRASS)
-                    .strength(0.6f).sounds(BlockSoundGroup.GRASS)
-            )
-        )
 
         if (LilligantConfig.contentConfig.addTagEnchantmentInterceptor) {
             EnchantmentEffectInterceptor.addInterceptor(TaggedStatusEnchantmentInterceptor)

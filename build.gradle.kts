@@ -8,9 +8,16 @@
 
 
 plugins {
-    id("tf.veriny.gradle.base-plugin").version("0.7.2")
+    kotlin("jvm").version("2.0.0")
+    id("maven-publish")
+    id("com.github.ben-manes.versions").version("0.51.0")
     id("fabric-loom").version("1.5.7")
-    id("com.palantir.git-version").version("3.0.0")
+    id("com.palantir.git-version").version("3.1.0")
+}
+
+repositories {
+    mavenCentral()
+    maven("https://jitpack.io")
 }
 
 group = "tf.veriny.unova"
@@ -25,6 +32,9 @@ loom.runs.named("client") {
 loom.accessWidenerPath.set(rootProject.file("src/main/resources/lilligant.accesswidener"))
 
 dependencies {
+    implementation(kotlin("stdlib"))
+    implementation(kotlin("reflect"))
+
     "minecraft"("com.mojang:minecraft:1.20.1")
 
     // this odd mappings layout means we use QM names for everything, and yarn JD.
@@ -41,7 +51,7 @@ dependencies {
     modImplementation("net.fabricmc.fabric-api:fabric-api:0.90.0+1.20.1")
     modImplementation("net.fabricmc:fabric-language-kotlin:1.10.17+kotlin.1.9.22")
 
-    modLocalRuntime("com.ptsmods:devlogin:3.3.2")
+    modLocalRuntime("com.ptsmods:devlogin:3.5")
 }
 
 tasks.named<ProcessResources>("processResources") {
