@@ -21,6 +21,7 @@
     ],
     "client": [
         "jvmargs.InjectArgumentsWarningScreen",
+        "langoverride.HijackTranslationStorage",
         "mandatorypeaceful.EnforcePeacefulOnWorldCreationScreen",
         "mandatorypeaceful.LockDifficultyButtonOnWorldCreateScreen",
         "narrator.DontSpamNarratorErrors",

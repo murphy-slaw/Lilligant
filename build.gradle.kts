@@ -31,6 +31,10 @@ loom.runs.named("client") {
 
 loom.accessWidenerPath.set(rootProject.file("src/main/resources/lilligant.accesswidener"))
 
+kotlin {
+    explicitApi()
+}
+
 dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
