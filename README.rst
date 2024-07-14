@@ -106,7 +106,7 @@ JVM Argument Checking
 ---------------------
 
 Lilligant adds a warning screen that warns the player if they've added useless (-XX:+EnableG1GC)
-or harmful (-XX:MaxTenuringThreshold=1, which copies all the BlockPos/Vec3 spam to G1 oldgen, BAD).
+or harmful (-XX:MaxTenuringThreshold=1) JVM args.
 
 Auto-Kill Ender Dragon
 ----------------------
@@ -119,3 +119,9 @@ Wayland Fixes
 
 Lilligant patches a handful of Blaze3D methods to support booting on Wayland natively if a GLFW
 version built for Wayland is used (e.g. 3.4.).
+
+Lang Overriding
+---------------
+
+Lilligant adds an extremely late language overrider that will forcibly overwrite language keys for
+the provided lang. Useful for when dynamic resources WON'T BEHAVE
