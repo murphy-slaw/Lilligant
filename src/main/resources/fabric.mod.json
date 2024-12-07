@@ -11,7 +11,7 @@
     "mixins": ["lilligant.mixins.json"],
     "entrypoints": {
         "main": [
-            {"adapter": "kotlin", "value": "tf.veriny.lilligant.MakeUp"},
+            {"adapter": "kotlin", "value": "tf.veriny.lilligant.MakeUp"}
         ],
         "client": [
             {"adapter": "kotlin", "value": "tf.veriny.lilligant.ClientMakeUp"}
