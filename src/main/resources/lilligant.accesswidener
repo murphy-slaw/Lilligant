@@ -1,6 +1,0 @@
-accessWidener v2 named
-
-accessible class net/minecraft/entity/passive/SnifferBrain$DigTask
-accessible class net/minecraft/client/gui/screen/world/CreateWorldScreen$GameTab
-
-accessible method net/minecraft/world/GameRules$BooleanRule create (Z)Lnet/minecraft/world/GameRules$Type;

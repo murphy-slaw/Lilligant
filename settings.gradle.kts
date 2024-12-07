@@ -10,7 +10,6 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
 
-        maven(url = "https://maven.veriny.tf/releases")
         maven(url = "https://maven.fabricmc.net/")
     }
 }

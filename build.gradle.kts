@@ -17,6 +17,7 @@ plugins {
 
 repositories {
     mavenCentral()
+    maven("https://maven.quiltmc.org/repository/release/")
     maven("https://jitpack.io")
 }
 
@@ -28,8 +29,6 @@ loom.runs.named("client") {
     isIdeConfigGenerated = true
     programArgs("--mimicPlayer", project.properties["fabricMimicPlayer"].toString())
 }
-
-loom.accessWidenerPath.set(rootProject.file("src/main/resources/lilligant.accesswidener"))
 
 kotlin {
     explicitApi()

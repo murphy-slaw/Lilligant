@@ -9,17 +9,13 @@
     "icon": "assets/lilligant/icon.png",
 
     "mixins": ["lilligant.mixins.json"],
-    "accessWidener": "lilligant.accesswidener",
-
     "entrypoints": {
         "main": [
             {"adapter": "kotlin", "value": "tf.veriny.lilligant.MakeUp"},
-            {"adapter": "kotlin", "value": "tf.veriny.lilligant.pebkac.IdiotJvmArgsEntrypoint"}
         ],
         "client": [
             {"adapter": "kotlin", "value": "tf.veriny.lilligant.ClientMakeUp"}
-        ],
-        "preLaunch": [{"adapter": "kotlin", "value": "tf.veriny.lilligant.pack.MetadataEntrypoint"}]
+        ]
     },
 
     "depends": {
